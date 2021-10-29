@@ -1,8 +1,11 @@
 #inputs {
-  outline:solid 1px lightgray;
-  box-shadow: 5px 5px 2px darkgray;
   padding:0.25rem;
   height:190px;
+  background-color: #06D6A0;
+}
+
+.card {
+  box-shadow: 3px 3px 2px #40916C;
 }
 
 .card-subtitle {
@@ -15,6 +18,17 @@ input {
 
 .card {
   margin-bottom:2px;
+  background-color: #1D3557;
 }
 
+body {
+  background-color: #073B4C;
+}
 
+.jumbotron {
+  background-color: #457B9D;
+}
+
+.container {
+  background-color: #457B9D;
+}
