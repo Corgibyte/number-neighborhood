@@ -11,6 +11,24 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Won't you be my beep, boop?</h1>
+    </div>
+    <div class="row">
+      <div id="inputs" class="col-lg-6">
+        <form id="inputForm">
+          <label for="numberInput">Enter number:</label>
+          <input id="numberInput" type="number" required=true min=0 placeholder="Positive Integer">
+        </form>
+        <button class="btn btn-outline-primary" type="submit">Submit</button>
+      </div>
+      <div id="outputs" class="col-lg-6">
+        <ul id="outputList">
+          <li>Testing here</li>
+        </ul>
+      </div>
+    </div>
+  </div>  
 </body>
 </html>
