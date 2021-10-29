@@ -30,13 +30,10 @@ None at current time
 ## Testing
 
 ### Describe: numberInterpreter(number)
-A function that takes a positive integer and array of translations and will return the proper string interpretation for the number based on the given translations with the following rules:
+A function that takes a positive integer and array of translations and will return the proper string interpretation for the number based on the given translations. Traslation array is in the format [boolean shouldTranslate, string translation]. Each digit is matched to its index and must have an entry, for a total of 10 entries (0-9). Only the digits where shouldTranslate are true will be interpreted with the translation. If the number includes multiple digits to be translated, the highest digit will be chosen.
 
-* Numbers that contain a 1: all digits are replaced with the first dialect input
-* Numbers that contain a 2: all digits are replaced with the second dialect input
-* Numbers that contain a 3: all digits are replaced with the third dialect input
-
-Default translation: `const defaultTranslations = ["Beep!", "Boop!", "Won't you be my neighbor?"];`
+Default translation for tests: 
+    const defaultTranslations = [[false,""], [true,"Beep!"], [true,"Boop!"], [true,"Won't you be my neighbor?"],[false,""],[false,""],[false,""],[false,""],[false,""],[false,""];
 
 **Test:** The number 0 should return 0 as a string.  
 **Code:** `numberInterpreter(0, defaultTranslations);`  
@@ -85,16 +82,15 @@ Default translation: `const defaultTranslations = ["Beep!", "Boop!", "Won't you 
 **Test:** A non-default translation with one included digit will be correctly translated.  
 **Code:**
 
-    const translation = ["Hello!", "There!", "General Kenobi!"];  
-    numberInterpreter(300);
+    const translations = [[false,""], [true,"Hello!"], [true,"There!"], [true,"General Kenobi!"],[false,""],[false,""],[false,""],[false,""],[false,""],[false,""];
+    numberInterpreter(3, translations);
 
 **Result:** "General Kenobi!"
 
 **Test:** A non-default translation with multiple included digits will be correctly translated.  
 **Code:**
 
-    const translation = ["Hello!", "There!", "General Kenobi!"];  
-    numberInterpreter(132);
+    numberInterpreter(132, translations);
 
 **Result:** "General Kenobi!"
 
