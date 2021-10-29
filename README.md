@@ -29,11 +29,11 @@ None at current time
 
 ## Testing
 
-### Describe: numberInterpreter(number)
+### Describe: numberInterpreter(number, translations)
 A function that takes a positive integer and array of translations and will return the proper string interpretation for the number based on the given translations. Traslation array is in the format [boolean shouldTranslate, string translation]. Each digit is matched to its index and must have an entry, for a total of 10 entries (0-9). Only the digits where shouldTranslate are true will be interpreted with the translation. If the number includes multiple digits to be translated, the highest digit will be chosen.
 
 Default translation for tests: 
-    const defaultTranslations = [[false,""], [true,"Beep!"], [true,"Boop!"], [true,"Won't you be my neighbor?"],[false,""],[false,""],[false,""],[false,""],[false,""],[false,""];
+    const defaultTranslations = [[false,""], [true,"Beep!"], [true,"Boop!"], [true,"Won't you be my neighbor?"],[false,""],[false,""],[false,""],[false,""],[false,""],[false,""]];
 
 **Test:** The number 0 should return 0 as a string.  
 **Code:** `numberInterpreter(0, defaultTranslations);`  
@@ -83,7 +83,7 @@ Default translation for tests:
 **Code:**
 
     const translations = [[false,""], [true,"Hello!"], [true,"There!"], [true,"General Kenobi!"],[false,""],[false,""],[false,""],[false,""],[false,""],[false,""];
-    numberInterpreter(3, translations);
+    numberInterpreter(3, translations)]];
 
 **Result:** "General Kenobi!"
 

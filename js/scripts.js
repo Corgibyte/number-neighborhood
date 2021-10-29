@@ -1,18 +1,12 @@
 function numberInterpreter(number, translations) {
   const numString = number.toString();
-  let includesOne = numString.includes("1");
-  let includesTwo = numString.includes("2");
-  let includesThree = numString.includes("3");
 
-  if (!includesOne && !includesTwo && !includesThree) {
-    return numString;
-  } else if (includesThree) {
-    return translations[2];
-  } else if (includesTwo) {
-    return translations[1];
-  } else {
-    return translations[0];
+  for (let i = 9; i >= 0; i--) {
+    if (numString.includes(i.toString()) && translations[i][0]) {
+      return translations[i][1];
+    }
   }
+  return numString;
 }
 
 function getMessages(number, translations) {
