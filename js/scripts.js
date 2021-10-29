@@ -14,3 +14,4 @@ function numberInterpreter(number) {
     return "Beep!";
   }
 }
+

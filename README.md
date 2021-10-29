@@ -50,3 +50,18 @@
 **Test:** A multi-digit number that contains 3, 2, and 1 should return "Won't you be my neighbor?"
 **Code:** `numberInterpreter(3412)`
 **Result:** `"Won't you be my neighbor?"`
+
+### Describe: getMessages(number)
+*A function that takes a positive integer and returns an array of string messages which are composed of a range of numbers from 0 to number (inclusive) after each number has been interpreted using the logic described in numberInterpreter.**
+
+**Test:** The number 0 should return a single element with proper interpretation.
+**Code:** `getMessages(0)`
+**Result:** `["0"]`
+
+**Test:** The number 1 should return two elements with proper interpretation.
+**Code:** `getMessages(1)`
+**Result:** `["0", "Beep!"]`
+
+**Test:** An arbitrary number should return that `number + 1` elements with proper interpretation.
+**Code:** `getMessages(5)`
+**Result:** `["0", "Beep!", "Boop!", "Won't you be my neighbor?", "4", "5"]`
