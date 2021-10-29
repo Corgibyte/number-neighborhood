@@ -15,6 +15,10 @@
 **Code:** `numberInterpreter(4)`
 **Result:** `"4"`
 
+**Test:** A multi digit number that does not include 1, 2, or 3 should return that number as a string.
+**Code:** `numberInterpreter(465)`
+**Result:** `"465"`
+
 **Test:** The number 1 should return "Beep!"
 **Code:** `numberInterpreter(1)`
 **Result:** `"Beep!"`
