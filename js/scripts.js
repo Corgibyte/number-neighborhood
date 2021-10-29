@@ -25,9 +25,11 @@ function getMessages(number, translations) {
 
 //UI
 
-function getResponseCard(inputNumber, messages) {
-  let card = "<div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title\">To " +
-    inputNumber + "</h5><p class=\"card-text\">";
+function getResponseCard(inputNumber, messages, translations) {
+  const cardTitle = "<div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title\">To: " 
+  + inputNumber + "</h5>";
+  const cardSubtitle = "<h6 class=\"card-subtitle text-muted\">Dialect [" + translations + "]</h6>";
+  let card = (cardTitle + cardSubtitle).concat("<p class=\"card-text\">");
   for (i = 0; i < messages.length; i++) {
     card = card.concat(messages[i]);
     if (i != messages.length - 1) {
@@ -44,7 +46,7 @@ $(document).ready(function() {
     const inputNumber = parseInt($("#numberInput").val());
     const translations = [$("#dialect1").val(), $("#dialect2").val(), $("#dialect3").val()];
     const messages = getMessages(inputNumber, translations);
-    $("#outputs").prepend(getResponseCard(inputNumber, messages));
+    $("#outputs").prepend(getResponseCard(inputNumber, messages,translations));
     $("#outputs").find("button").first().click(function() {
       $(this).closest(".card").remove();
     });

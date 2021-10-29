@@ -5,6 +5,10 @@
   height:190px;
 }
 
+.card-subtitle {
+  padding-bottom:0.25em;
+}
+
 input {
   max-width:15rem;
 }
