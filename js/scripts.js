@@ -22,7 +22,7 @@ function getMessages(number, translations) {
 function getResponseCard(inputNumber, messages, translations) {
   let translationText = "Dialect: [";
   for (let i = 0; i < 10; i++) {
-    if (translations[i][1] !== "" && translations[i][0]) {
+    if (translations[i][0]) {
       translationText = translationText.concat(i + ": " + translations[i][1]);
       if (i < 9) {
         translationText = translationText.concat(", ");
