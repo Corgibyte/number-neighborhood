@@ -25,15 +25,25 @@ function getMessages(number) {
 
 //UI
 
+function getResponseCard(inputNumber, messages) {
+  let card = "<div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title\">To " +
+    inputNumber + "</h5><p class=\"card-text\">";
+  for (i = 0; i < messages.length; i++) {
+    card = card.concat(messages[i]);
+    if (i != messages.length - 1) {
+      card = card.concat(", ");
+    }    
+  }
+  return card.concat("</p></div></div>");
+}
+
 $(document).ready(function() {
   $("#inputForm").submit(function(event) {
     event.preventDefault();
     const inputNumber = parseInt($("#numberInput").val());
     if (inputNumber >= 0) {
       const messages = getMessages(inputNumber);
-      messages.forEach(function(message) {
-        $("#outputList").append("<li>" + message + "</li>");
-      });
+      $("#outputs").append(getResponseCard(inputNumber, messages));
     } else {
       outputList.append("<li>Number must be positive</li>");
     }
