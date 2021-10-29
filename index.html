@@ -15,26 +15,30 @@
     <div class="jumbotron">
       <h1>Won't you be my beep, boop?</h1>
     </div>
-    <div class="row">
-      <div class="col-1">
-      </div>
-      <div id="inputs" class="card col-lg-4">
-        <form id="inputForm">
-          <label for="numberInput">Ending number:</label>
-          <input id="numberInput" type="number" required=true min=0 placeholder="Positive Integer">
-          <label for="dialect1">Translation for 1:</label>
-          <input id="dialect1" type="text" value="Beep!">
-          <label for="dialect2">Translation for 2:</label>
-          <input id="dialect2" type="text" value="Boop!">
-          <label for="dialect3">Translation for 3:</label>
-          <input id="dialect3" type="text" value="Won't you be my neighbor?">
-          <button class="btn btn-primary" type="submit">Translate</button>
-        </form>
-      </div>
-      <div class="col-lg-1">
-      </div>
-      <div id="outputs" class="col-lg-6">        
-      </div>
+    <div id="inputs" class="card">
+      <form id="inputForm">
+        <label for="numberInput">Ending number:</label>
+        <input id="numberInput" type="number" required=true min=0 placeholder="Positive Integer">
+        <br>
+        <label for="dialect1">Translation for 1:</label>
+        <input id="dialect1" type="text" value="Beep!">
+        <label for="check1">Translate 1?</label>
+        <input type="checkbox" name="check1" value="1">
+        <br>
+        <label for="dialect2">Translation for 2:</label>
+        <input id="dialect2" type="text" value="Boop!">
+        <label for="check1">Translate 1?</label>
+        <input type="checkbox" name="check1" value="1">
+        <br>
+        <label for="dialect3">Translation for 3:</label>
+        <input id="dialect3" type="text" value="Won't you be my neighbor?">
+        <label for="check1">Translate 1?</label>
+        <input type="checkbox" name="check1" value="1">
+        <br>
+        <button class="btn btn-primary" type="submit">Translate</button>
+      </form>
+    </div>
+    <div id="outputs"">
     </div>
   </div>  
 </body>
