@@ -1,14 +1,10 @@
 #inputs {
-  outline:solid black;
-  padding: 0.25rem 0.5rem;
-  margin:0rem 2rem;
-  background-color: antiquewhite;
+  outline:solid 1px black;
+  padding:0.25rem;
 }
 
 #outputs {
-  outline:solid black;
-  padding: 0.25rem 0.5rem;
-  margin:0rem 2rem;
-  background-color:cornflowerblue;
+  outline:solid 1px black;
+  padding:0.25rem;
 }
 
