@@ -1,3 +1,32 @@
+## Number Neighborhood
+
+By Hannah Young
+
+A simple site that interprets a range of numbers based on the given dialect. 
+
+### Technologies Used
+* HTML
+* CSS (including Bootstrap)
+* JavaScript (including JQuery)
+
+### Description
+
+This website showcases my ability to develop and deploy a website with simple logic to interpret a range of numbers with a given dialect. The range always starts with 0 and goes up to and includes a given input. Each number is translated depending on if it includes the digits 1, 2, or 3. If one of these digits is present, then the entire number will be replaced with the dialectical interpretation of that digit using given inputs. If multiple 1, 2 or 3 digits are included, the interpretation will be chosen based on the largest included digit.
+
+The website is visible on [GitHub Pages](https://Corgibyte.github.io/number-neighborhood).
+
+### Setup
+1. Download and install Git
+2. Download source folder while using terminal in desired parent directory using `git clone https://github.com/Corgibyte/number-neighborhood`
+3. Open `index.html` in your browser
+
+### Known bugs: 
+None at current time
+
+### License
+
+[Apache License 2.0](https://github.com/Corgibyte/number-neighborhood/blob/main/LICENSE), Copyright 2021 Hannah Young.
+
 ## Testing
 
 ### Describe: numberInterpreter(number)
