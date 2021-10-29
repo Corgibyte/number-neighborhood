@@ -34,7 +34,8 @@ function getResponseCard(inputNumber, messages) {
       card = card.concat(", ");
     }    
   }
-  return card.concat("</p></div></div>");
+  card = card.concat("</p><button class=\"btn btn-outline-danger btn-sm\" type=\"button\">Remove</button>");
+  return card.concat("</div></div>");
 }
 
 $(document).ready(function() {
@@ -44,6 +45,9 @@ $(document).ready(function() {
     if (inputNumber >= 0) {
       const messages = getMessages(inputNumber);
       $("#outputs").append(getResponseCard(inputNumber, messages));
+      $("#outputs").find("button").first().click(function() {
+        $(this).closest(".card").remove();
+      });
     } else {
       outputList.append("<li>Number must be positive</li>");
     }
