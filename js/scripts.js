@@ -22,3 +22,20 @@ function getMessages(number) {
   }
   return messages;
 }
+
+//UI
+
+$(document).ready(function() {
+  $("#inputForm").submit(function(event) {
+    event.preventDefault();
+    const inputNumber = parseInt($("#numberInput").val());
+    if (inputNumber >= 0) {
+      const messages = getMessages(inputNumber);
+      messages.forEach(function(message) {
+        $("#outputList").append("<li>" + message + "</li>");
+      });
+    } else {
+      outputList.append("<li>Number must be positive</li>");
+    }
+  });
+});
