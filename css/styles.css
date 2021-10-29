@@ -1,10 +1,12 @@
 #inputs {
-  outline:solid 1px black;
+  outline:solid 1px lightgray;
+  box-shadow: 5px 5px 2px darkgray;
   padding:0.25rem;
+  max-height:100px;
 }
 
-#outputs {
-  outline:solid 1px black;
-  padding:0.25rem;
+.card {
+  margin-bottom:2px;
 }
+
 
