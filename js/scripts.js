@@ -15,3 +15,10 @@ function numberInterpreter(number) {
   }
 }
 
+function getMessages(number) {
+  let messages = [];
+  for (let i = 0; i <= number; i++) {
+    messages.push(numberInterpreter(i));
+  }
+  return messages;
+}
