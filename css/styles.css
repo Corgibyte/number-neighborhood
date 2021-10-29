@@ -2,7 +2,10 @@
   outline:solid 1px lightgray;
   box-shadow: 5px 5px 2px darkgray;
   padding:0.25rem;
-  max-height:100px;
+}
+
+input {
+  max-width:15rem;
 }
 
 .card {
