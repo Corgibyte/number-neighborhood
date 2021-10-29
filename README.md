@@ -1,9 +1,13 @@
 ## Testing
 
 ### Describe: numberInterpreter(number)
-*A function that takes a positive integer and array of translations and will return the proper string interpretation for the number based on the given translations.
+*A function that takes a positive integer and array of translations and will return the proper string interpretation for the number based on the given translations with the following rules:
 
-Default translation: `const defaultTranslations = ["Beep!", "Boop!", "Won't you be my neighbor?", "4", "5", "6", "7", "8", "9", "0"];`
+* Numbers that contain a 1: all digits are replaced with the first dialect input
+* Numbers that contain a 2: all digits are replaced with the second dialect input
+* Numbers that contain a 3: all digits are replaced with the third dialect input
+
+Default translation: `const defaultTranslations = ["Beep!", "Boop!", "Won't you be my neighbor?"];`
 
 **Test:** The number 0 should return 0 as a string.  
 **Code:** `numberInterpreter(0, defaultTranslations);`  
@@ -52,7 +56,7 @@ Default translation: `const defaultTranslations = ["Beep!", "Boop!", "Won't you 
 **Test:** A non-default translation with one included digit will be correctly translated.  
 **Code:**
 
-    const translation = ["Hello!", "There!", "General Kenobi!", "4", "5", "6", "7", "8", "9", "0"];  
+    const translation = ["Hello!", "There!", "General Kenobi!"];  
     numberInterpreter(300);
 
 **Result:** "General Kenobi!"
@@ -60,7 +64,7 @@ Default translation: `const defaultTranslations = ["Beep!", "Boop!", "Won't you 
 **Test:** A non-default translation with multiple included digits will be correctly translated.  
 **Code:**
 
-    const translation = ["Hello!", "There!", "General Kenobi!", "4", "5", "6", "7", "8", "9", "0"];  
+    const translation = ["Hello!", "There!", "General Kenobi!"];  
     numberInterpreter(132);
 
 **Result:** "General Kenobi!"
