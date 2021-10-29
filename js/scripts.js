@@ -36,7 +36,7 @@ function getResponseCard(inputNumber, messages, translations) {
       card = card.concat(", ");
     }    
   }
-  card = card.concat("</p><button class=\"btn btn-outline-danger btn-sm\" type=\"button\">Remove</button>");
+  card = card.concat("</p><button class=\"btn btn-danger btn-sm\" type=\"button\">Remove</button>");
   return card.concat("</div></div>");
 }
 

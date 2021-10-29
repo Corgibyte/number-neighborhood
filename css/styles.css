@@ -1,11 +1,10 @@
 #inputs {
   padding:0.25rem;
   height:190px;
-  background-color: #06D6A0;
 }
 
 .card {
-  box-shadow: 3px 3px 2px #40916C;
+  box-shadow: 3px 3px 2px #C00021;
 }
 
 .card-subtitle {
@@ -17,18 +16,19 @@ input {
 }
 
 .card {
-  margin-bottom:2px;
-  background-color: #1D3557;
+  margin-bottom:1rem;
+  background-color: #00c09f;
 }
 
 body {
-  background-color: #073B4C;
+  background-color: #FDFDFF;
 }
 
 .jumbotron {
-  background-color: #457B9D;
+  background-color: #393D3F;
+  color: #FDFDFF
 }
 
 .container {
-  background-color: #457B9D;
+  background-color: #393D3F;
 }
