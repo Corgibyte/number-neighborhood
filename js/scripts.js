@@ -8,5 +8,9 @@ function numberInterpreter(number) {
     return numString;
   } else if (includesThree) {
     return "Won't you be my neighbor?"
+  } else if (includesTwo) {
+    return "Boop!";
+  } else {
+    return "Beep!";
   }
 }
