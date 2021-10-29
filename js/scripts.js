@@ -31,6 +31,9 @@ function getResponseCard(inputNumber, messages, translations) {
   }
   translationText = translationText.slice(0, translationText.length -2);
   translationText = translationText.concat("]");
+  if (translationText === "Dialect:]") {
+    translationText = "No translation requested"
+  }
   const cardTitle = "<div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title\">To: " 
   + inputNumber + "</h5>";
   const cardSubtitle = "<h6 class=\"card-subtitle\">" + translationText + "</h6>";
