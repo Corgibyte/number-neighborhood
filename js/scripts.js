@@ -6,5 +6,7 @@ function numberInterpreter(number) {
 
   if (!includesOne && !includesTwo && !includesThree) {
     return numString;
+  } else if (includesThree) {
+    return "Won't you be my neighbor?"
   }
 }
