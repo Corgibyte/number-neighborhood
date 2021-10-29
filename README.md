@@ -30,7 +30,7 @@ None at current time
 ## Testing
 
 ### Describe: numberInterpreter(number)
-*A function that takes a positive integer and array of translations and will return the proper string interpretation for the number based on the given translations with the following rules:
+A function that takes a positive integer and array of translations and will return the proper string interpretation for the number based on the given translations with the following rules:
 
 * Numbers that contain a 1: all digits are replaced with the first dialect input
 * Numbers that contain a 2: all digits are replaced with the second dialect input
@@ -98,17 +98,17 @@ Default translation: `const defaultTranslations = ["Beep!", "Boop!", "Won't you 
 
 **Result:** "General Kenobi!"
 
-### Describe: getMessages(number)
+### Describe: getMessages(number, translations)
 *A function that takes a positive integer and returns an array of string messages which are composed of a range of numbers from 0 to number (inclusive) after each number has been interpreted using the logic described in numberInterpreter.**
 
 **Test:** The number 0 should return a single element with proper interpretation.  
-**Code:** `getMessages(0)`  
+**Code:** `getMessages(0, defaultTranslations)`  
 **Result:** `["0"]`
 
 **Test:** The number 1 should return two elements with proper interpretation.  
-**Code:** `getMessages(1)`  
+**Code:** `getMessages(1, defaultTranslations)`  
 **Result:** `["0", "Beep!"]`
 
 **Test:** An arbitrary number should return that `number + 1` elements with proper interpretation.  
-**Code:** `getMessages(5)`  
+**Code:** `getMessages(5, defaultTranslations)`  
 **Result:** `["0", "Beep!", "Boop!", "Won't you be my neighbor?", "4", "5"]`
