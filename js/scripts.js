@@ -1,4 +1,4 @@
-function numberInterpreter(number) {
+function numberInterpreter(number, translations) {
   const numString = number.toString();
   let includesOne = numString.includes("1");
   let includesTwo = numString.includes("2");
@@ -7,11 +7,11 @@ function numberInterpreter(number) {
   if (!includesOne && !includesTwo && !includesThree) {
     return numString;
   } else if (includesThree) {
-    return "Won't you be my neighbor?"
+    return translations[2];
   } else if (includesTwo) {
-    return "Boop!";
+    return translations[1];
   } else {
-    return "Beep!";
+    return translations[0];
   }
 }
 
@@ -42,7 +42,8 @@ $(document).ready(function() {
   $("#inputForm").submit(function(event) {
     event.preventDefault();
     const inputNumber = parseInt($("#numberInput").val());
-    const messages = getMessages(inputNumber);
+    const translations = [$("#dialect1").val(), $("#dialect2").val(), $("#dialect3").val()];
+    const messages = getMessages(inputNumber, translations);
     $("#outputs").prepend(getResponseCard(inputNumber, messages));
     $("#outputs").find("button").first().click(function() {
       $(this).closest(".card").remove();

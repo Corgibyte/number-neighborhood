@@ -2,6 +2,7 @@
   outline:solid 1px lightgray;
   box-shadow: 5px 5px 2px darkgray;
   padding:0.25rem;
+  height:190px;
 }
 
 input {
