@@ -42,14 +42,10 @@ $(document).ready(function() {
   $("#inputForm").submit(function(event) {
     event.preventDefault();
     const inputNumber = parseInt($("#numberInput").val());
-    if (inputNumber >= 0) {
-      const messages = getMessages(inputNumber);
-      $("#outputs").append(getResponseCard(inputNumber, messages));
-      $("#outputs").find("button").first().click(function() {
-        $(this).closest(".card").remove();
-      });
-    } else {
-      outputList.append("<li>Number must be positive</li>");
-    }
+    const messages = getMessages(inputNumber);
+    $("#outputs").prepend(getResponseCard(inputNumber, messages));
+    $("#outputs").find("button").first().click(function() {
+      $(this).closest(".card").remove();
+    });
   });
 });
