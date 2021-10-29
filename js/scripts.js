@@ -28,7 +28,7 @@ function getMessages(number, translations) {
 function getResponseCard(inputNumber, messages, translations) {
   const cardTitle = "<div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title\">To: " 
   + inputNumber + "</h5>";
-  const cardSubtitle = "<h6 class=\"card-subtitle text-muted\">Dialect [" + translations + "]</h6>";
+  const cardSubtitle = "<h6 class=\"card-subtitle\">Dialect [" + translations + "]</h6>";
   let card = (cardTitle + cardSubtitle).concat("<p class=\"card-text\">");
   for (i = 0; i < messages.length; i++) {
     card = card.concat(messages[i]);

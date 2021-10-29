@@ -1,6 +1,6 @@
 #inputs {
-  padding:0.25rem;
-  height:190px;
+  padding:1rem;
+  width:80%;
 }
 
 .card {
@@ -11,8 +11,8 @@
   padding-bottom:0.25em;
 }
 
-input {
-  max-width:15rem;
+input[type=text] {
+  width:50%;
 }
 
 .card {
@@ -31,4 +31,8 @@ body {
 
 .container {
   background-color: #393D3F;
+}
+
+.card-subtitle {
+  color:darkslateblue;
 }
